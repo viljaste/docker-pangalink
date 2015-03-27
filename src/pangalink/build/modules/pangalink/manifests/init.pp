@@ -56,6 +56,7 @@ define bash_exec (
 }
 
 class pangalink {
+  require pangalink::supervisor
   require pangalink::nodejs::packages
 
   file { '/tmp/pangalink-net-1.0.2_all.deb':
