@@ -9,6 +9,8 @@ ADD ./src /src
 
 RUN /src/entrypoint.sh build
 
+VOLUME ["/pangalink"]
+
 EXPOSE 80
 
 CMD ["/src/entrypoint.sh", "run"]

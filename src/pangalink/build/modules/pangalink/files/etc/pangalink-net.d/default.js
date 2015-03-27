@@ -42,7 +42,7 @@ module.exports = {
   loggerInterface: ':req[x-client-remote-address] [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] - :response-time ms',
 
   // andmefailide kaust
-  data: '/var/lib/pangalink-net',
+  data: '/pangalink',
 
   // vali user ja group kelle õigustes rakendus töötab
   // jälgi, et sellel kasutajal oleks andmete kaustas kirjutusõigus
