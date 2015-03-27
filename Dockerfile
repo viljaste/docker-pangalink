@@ -9,4 +9,6 @@ ADD ./src /src
 
 RUN /src/entrypoint.sh build
 
+EXPOSE 3480
+
 CMD ["/src/entrypoint.sh", "run"]
