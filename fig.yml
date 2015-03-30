@@ -1,12 +1,12 @@
 pangalink:
-  image: simpledrupalcloud/pangalink:latest
+  image: viljaste/pangalink:latest
   hostname: pangalink
   ports:
     - "80:80"
   volumes_from:
     - pangalinkdata
 pangalinkdata:
-  image: simpledrupalcloud/data:latest
+  image: viljaste/data:latest
   hostname: pangalinkdata
   volumes:
     - /pangalink
