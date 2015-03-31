@@ -57,7 +57,7 @@ define bash_exec (
 
 class pangalink {
   if ! file_exists('/pangalink/ssl/certs/pangalink.crt') {
-    require pangalink::httpd::ssl
+    require pangalink::ssl
   }
 
   bash_exec { 'mkdir -p /pangalink/data': }

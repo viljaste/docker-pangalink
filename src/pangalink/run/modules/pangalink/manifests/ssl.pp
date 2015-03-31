@@ -1,4 +1,4 @@
-class pangalink::httpd::ssl {
+class pangalink::ssl {
   bash_exec { 'mkdir -p /pangalink/ssl': }
 
   bash_exec { 'mkdir -p /pangalink/ssl/private':
