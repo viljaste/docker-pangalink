@@ -6,11 +6,11 @@ module.exports = {
   title: 'Pangalink-net',
 
   // Linkides kasutatud protokoll
-  proto: 'http',
+  proto: 'https',
   // Linkides kasutatud domeeninimi
-  hostname: '', // näiteks 'localhost:3480'
+  hostname: '<%= @server_name %>', // näiteks 'localhost:3480'
   // port millel kuulata
-  port: 80,
+  port: 3480,
 
   // sessiooni andmed
   session: {
@@ -42,7 +42,7 @@ module.exports = {
   loggerInterface: ':req[x-client-remote-address] [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] - :response-time ms',
 
   // andmefailide kaust
-  data: '/pangalink',
+  data: '/pangalink/data',
 
   // vali user ja group kelle õigustes rakendus töötab
   // jälgi, et sellel kasutajal oleks andmete kaustas kirjutusõigus

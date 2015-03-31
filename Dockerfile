@@ -12,5 +12,6 @@ RUN /src/entrypoint.sh build
 VOLUME ["/pangalink"]
 
 EXPOSE 80
+EXPOSE 443
 
 CMD ["/src/entrypoint.sh", "run"]

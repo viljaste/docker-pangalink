@@ -1,0 +1,25 @@
+map $http_x_forwarded_proto $proxy_x_forwarded_proto {
+  default $http_x_forwarded_proto;
+
+  '' $scheme;
+}
+
+upstream pangalink {
+  server localhost:3480;
+}
+
+server {
+  listen 443 ssl;
+  server_name <%= @server_name %>;
+
+  location / {
+    proxy_pass http://pangalink;
+
+    proxy_set_header Host $http_host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $proxy_x_forwarded_proto;
+
+    proxy_redirect http:// https://;
+  }
+}

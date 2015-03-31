@@ -56,5 +56,15 @@ define bash_exec (
 }
 
 class pangalink {
+  if ! file_exists('/pangalink/ssl/certs/pangalink.crt') {
+    require pangalink::httpd::ssl
+  }
 
+  bash_exec { 'mkdir -p /pangalink/data': }
+
+  file { '/etc/pangalink-net.d/default.js':
+    ensure => present,
+    content => template('pangalink/default.js.erb'),
+    mode => 644
+  }
 }
