@@ -3,8 +3,11 @@ pangalink:
   hostname: pangalink
   ports:
     - "80:80"
+    - "443:443"
   volumes_from:
     - pangalinkdata
+  environment:
+    - SERVER_NAME=localhost
 pangalinkdata:
   image: viljaste/data:latest
   hostname: pangalinkdata
