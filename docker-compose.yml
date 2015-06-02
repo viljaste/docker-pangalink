@@ -1,6 +1,7 @@
 pangalink:
   image: viljaste/pangalink:latest
   hostname: pangalink
+  restart: always
   ports:
     - "80:80"
     - "443:443"
