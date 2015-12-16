@@ -1,4 +1,10 @@
 class pangalink::packages {
+  package {[
+      'curl'
+    ]:
+    ensure => present
+  }
+
   file { '/tmp/pangalink-net-1.0.2_all.deb':
     ensure => present,
     source => 'puppet:///modules/pangalink/tmp/pangalink-net-1.0.2_all.deb'
